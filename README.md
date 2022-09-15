@@ -45,4 +45,4 @@ Se esperan las siguientes funcionalidades para el prototipo
 
 ### UML
 
-![URL-1.png](URL-1.png)
+![URL-1.jpg](URL-1.jpg)
