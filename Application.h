@@ -7,7 +7,11 @@
 #include "Person.h"
 #include "Reservation.h"
 #include "Owner.h"
-#include "Owner.h"
+
+using std::cout;
+using std::cin;
+using std::string;
+using std::unordered_map;
 
 
 
