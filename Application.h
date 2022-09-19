@@ -7,6 +7,7 @@
 #include "Person.h"
 #include "Reservation.h"
 #include "Owner.h"
+#include "Guest.h"
 
 using std::cout;
 using std::cin;
@@ -19,11 +20,16 @@ private:
     int idEvaluation;
 
     unordered_map<double, Owner*> owners;
+    unordered_map<double, Guest*> guests;
+
     unordered_map<int , Reservation*> reservations;
     unordered_map<int , Evaluation*> evaluations;
 
 public:
     Application(); //Constructor
+    virtual ~Application(); //Destructor
+
+    void inicializarDatos();
 
     void addOwner();
     void addGuest();
