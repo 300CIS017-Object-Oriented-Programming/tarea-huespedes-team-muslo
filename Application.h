@@ -13,9 +13,27 @@ using std::cin;
 using std::string;
 using std::unordered_map;
 
-
-
 class Application {
+private:
+    int idReserva;
+    int idEvaluation;
+
+    unordered_map<double, Owner*> owners;
+    unordered_map<int , Reservation*> reservations;
+    unordered_map<int , Evaluation*> evaluations;
+
+public:
+    Application(); //Constructor
+
+    void addOwner();
+    void addGuest();
+    void addEvaluation();
+    void addReservation();
+    void addHome();
+
+    void printOwners();
+    void printReservations();
+    void printEvaluations();
 
 };
 
