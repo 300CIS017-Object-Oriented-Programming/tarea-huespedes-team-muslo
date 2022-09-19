@@ -9,11 +9,23 @@ using std::string;
 
 class Person{
 private:
-    string id;
+    double id;
     string name;
     bool sex;
-    string date;
-    int points;
+    string birthDate;
+
+public:
+    double getId();
+    void setId(double id);
+
+    string getName();
+    void setName(string name);
+
+    bool getSex();
+    void setSex(bool sex);
+
+    string getBirthDate();
+    void setBirthDate(string birthDate);
 
 };
 
