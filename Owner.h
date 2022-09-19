@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "Person.h"
+#include "Home.h"
 
 using std::cout;
 using std::cin;
@@ -10,7 +11,20 @@ using std::string;
 
 class Owner: private Person{
 private:
-    bool guests;
+    bool isFree;
+    double points;
+    Home *home;
+
+public:
+
+    bool getIsFree();
+    void setIsFree(bool isFree);
+
+    bool getPoints();
+    void setPoints(double points);
+
+    bool getHome();
+    void setHome(Home* home);
 
 };
 

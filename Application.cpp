@@ -11,6 +11,8 @@ Application :: Application(){
 
 void Application::inicializarDatos() {
     auto *owner1 = new Owner();
+
+    owner1 -> s;
 }
 
 

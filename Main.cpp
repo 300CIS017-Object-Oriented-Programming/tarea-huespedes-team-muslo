@@ -25,26 +25,8 @@ void menu(Application & application) {
         cout << "\n";
         switch (opc) {
             case 1:
-                veterinaria.agregarPropietario();
                 break;
-            case 2:
-                veterinaria.imprimirPropietarios();
-                break;
-            case 3:
-                veterinaria.agregarMascota();
-                break;
-            case 4:
-                veterinaria.imprimirMascotas();
-                break;
-            case 5:
-                veterinaria.agregarMascotaAPropietario();
-                break;
-            case 6:
-                veterinaria.marcarParaMuerte();
-                break;
-            case 7:
-                veterinaria.mostrarMuertes();
-                break;
+
             default:
                 break;
         }
