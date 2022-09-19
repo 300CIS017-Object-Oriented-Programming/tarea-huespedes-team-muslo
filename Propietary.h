@@ -2,7 +2,8 @@
 #define TAREA_HUESPEDES_TEAM_MUSLO_PROPIETARY_H
 
 class Propietary{
-
+private:
+    bool guests;
 
 };
 
