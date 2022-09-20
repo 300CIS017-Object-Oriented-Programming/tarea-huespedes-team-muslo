@@ -35,20 +35,19 @@ void Application::inicializarDatos() {
 
 void Application::addHome(){
     double idIndex;
-
-    
-
-    Home* newHome = new Home();
-
     cout <<"Introduzca el ID del Dueño\n";
     cin >> idIndex;
 
-    createHome(newHome);
+    if(owners.find(idIndex) == owners.end()){
+        cout << "Ese propietario no se encuentra en la lista de propietarios, Porfavor revise que sus datos esten correctos antes de ingresarlos al sistema porfavor\n";
+    }
+    else{
+        Home* newHome = new Home();
 
-    owners[idIndex]->setHome(newHome);
+        createHome(newHome);
 
-    cout << "VERGA D E OSO: " << owners[idIndex] -> getHome() -> getDescription();
-
+        owners[idIndex]->setHome(newHome);
+    }
 }
 
 void Application::createHome(Home *newHome){
@@ -60,7 +59,7 @@ void Application::createHome(Home *newHome){
     cout << "Introduzca la direccion\n";
     cin.ignore();
     getline(cin, address);
-    cout << "Introduzca si bebes.\n 1 si bebes \n 01 no bebes\n";
+    cout << "Introduzca si la casa no discrimina contra bebes:\n  1 si bebes \n  0 no bebes\n";
     cin >> babies;
 
     cout << "Introduzca cuantas camas\n";
