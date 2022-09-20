@@ -35,7 +35,10 @@ void Application::inicializarDatos() {
 
 void Application::addHome(){
     double idIndex;
-    Home* newHome;
+
+    
+
+    Home* newHome = new Home();
 
     cout <<"Introduzca el ID del Dueño\n";
     cin >> idIndex;
@@ -57,7 +60,7 @@ void Application::createHome(Home *newHome){
     cout << "Introduzca la direccion\n";
     cin.ignore();
     getline(cin, address);
-    cout << "Introduzca si bebes.\n 1 si bebes \n 0 si no bebes\n";
+    cout << "Introduzca si bebes.\n 1 si bebes \n 01 no bebes\n";
     cin >> babies;
 
     cout << "Introduzca cuantas camas\n";
@@ -67,7 +70,7 @@ void Application::createHome(Home *newHome){
     cin.ignore();
     getline(cin, description);
 
-    newHome ->setAddress("Nuevo adress");
+    newHome ->setAddress(address);
     newHome ->setBabies(babies);
     newHome ->setBeds(beds);
     newHome ->setDescription(description);

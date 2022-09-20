@@ -16,6 +16,7 @@ private:
     Home *home;
 
 public:
+    Owner();
 
     bool getIsFree();
     void setIsFree(bool isFree);

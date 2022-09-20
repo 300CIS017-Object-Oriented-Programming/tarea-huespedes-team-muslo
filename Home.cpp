@@ -1,6 +1,13 @@
 #include "Home.h"
 #include <iostream>
 
+Home::Home(){
+    address="";
+    beds=0;
+    babies=false;
+    description="";
+}
+
 void Home::setAddress(string newAddress){
     Home::address = newAddress;
 }

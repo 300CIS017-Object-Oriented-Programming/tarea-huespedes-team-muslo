@@ -1,6 +1,13 @@
 #include "Owner.h"
 #include <iostream>
 
+Owner::Owner(){
+    isFree = false;
+    points = 0;
+    home = nullptr;
+}
+
+
 bool Owner::getIsFree(){
     return isFree;
 }

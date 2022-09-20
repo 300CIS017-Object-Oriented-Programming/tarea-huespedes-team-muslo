@@ -11,6 +11,7 @@ private:
     bool babies;
     string description;
 public:
+    Home();
     void setAddress(string newAddress);
     string getAddress();
 
