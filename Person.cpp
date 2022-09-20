@@ -1,6 +1,16 @@
 #include "Person.h"
 #include <iostream>
 
+void Person::printPersonData(){
+    cout << "Nombre: " << name << "\n";
+    cout << "ID: " << id << "\n";
+    cout << "Gender: " << sex << "\n";
+    cout << "Date of Birth: " << birthDate << "\n";
+
+
+}
+
+
 double Person::getId(){
     return id;
 }

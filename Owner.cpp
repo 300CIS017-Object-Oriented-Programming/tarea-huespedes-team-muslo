@@ -7,6 +7,20 @@ Owner::Owner(){
     home = nullptr;
 }
 
+void Owner::printData(){
+
+    if(isFree){
+        cout << "\n********************\nAVAILABLE\n";
+    }
+    else{
+        cout << "\n********************\nUNAVAILABLE\n";
+    }
+
+    printPersonData();
+
+    cout << "Score: " << points << "\n";
+}
+
 
 bool Owner::getIsFree(){
     return isFree;

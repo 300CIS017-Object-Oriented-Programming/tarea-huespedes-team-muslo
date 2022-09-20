@@ -21,7 +21,6 @@ private:
 
     unordered_map<double, Owner*> owners;
     unordered_map<double, Guest*> guests;
-
     unordered_map<int , Reservation*> reservations;
     unordered_map<int , Evaluation*> evaluations;
 
@@ -38,9 +37,11 @@ public:
     void addHome();
     void createHome(Home *newHome);
 
-    void printOwners();
+    void printAllPeople();
     void printReservations();
     void printEvaluations();
+
+    void deleteReservation();
 
 };
 

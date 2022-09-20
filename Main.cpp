@@ -10,10 +10,10 @@ void menu(Application & application) {
     do {
         cout << "\n" << "BIENVENIDOS Al proyecto que hicimos\n";
         cout << "1. Agregar Casa a propietario \n";
-        cout << "2. Imprimir propietarios \n";
-        cout << "3. Agregar mascota \n";
-        cout << "4. Imprimir mascotas libres \n";
-        cout << "5. Adoptar Mascota\n";
+        cout << "2. Imprimir todas las personas \n";
+        cout << "3. Add reservation\n";
+        cout << "4. Print reservations \n";
+        cout << "5. Eliminar reserva\n";
         cout << "6. Sacrificar Mascota\n";
         cout << "7. Mostrar Muertes\n";
 
@@ -26,6 +26,22 @@ void menu(Application & application) {
         switch (opc) {
             case 1:
                 application.addHome();
+                break;
+
+            case 2:
+                application.printAllPeople();
+                break;
+
+            case 3:
+                application.addReservation();
+                break;
+
+            case 4:
+                application.printReservations();
+                break;
+
+            case 5:
+                application.deleteReservation();
                 break;
 
             default:

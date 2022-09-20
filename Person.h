@@ -15,6 +15,8 @@ private:
     string birthDate;
 
 public:
+    void printPersonData();
+
     double getId();
     void setId(double id);
 
