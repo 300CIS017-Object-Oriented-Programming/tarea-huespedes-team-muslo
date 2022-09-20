@@ -3,7 +3,7 @@
 
 Owner::Owner(){
     isFree = false;
-    points = 0;
+    points = 5;
     home = nullptr;
 }
 

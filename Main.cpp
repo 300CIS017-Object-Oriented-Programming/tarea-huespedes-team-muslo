@@ -14,8 +14,8 @@ void menu(Application & application) {
         cout << "3. Add reservation\n";
         cout << "4. Print reservations \n";
         cout << "5. Eliminar reserva\n";
-        cout << "6. Sacrificar Mascota\n";
-        cout << "7. Mostrar Muertes\n";
+        cout << "6. Añadir evaluacion\n";
+        cout << "7. Mostrar Evaluaciones\n";
 
 
 
@@ -42,6 +42,14 @@ void menu(Application & application) {
 
             case 5:
                 application.deleteReservation();
+                break;
+
+            case 6:
+                application.addEvaluation();
+                break;
+
+            case 7:
+                application.printEvaluations();
                 break;
 
             default:

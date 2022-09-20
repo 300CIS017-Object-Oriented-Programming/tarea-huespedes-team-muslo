@@ -20,7 +20,7 @@ void Application::inicializarDatos() {
     owner1->setSex(true);
     owner1->setBirthDate("Marzo 3 2005");
     owner1->setIsFree(true);
-    owner1->setPoints(0);
+    owner1->setPoints(5);
     owner1->setHome(nullptr);
 
     owner2->setId(1006);
@@ -28,7 +28,7 @@ void Application::inicializarDatos() {
     owner2->setSex(false);
     owner2->setBirthDate("Marzo 4 2205");
     owner2->setIsFree(true);
-    owner2->setPoints(0);
+    owner2->setPoints(5);
     owner2->setHome(nullptr);
 
     guest1->setId(1007);
@@ -77,6 +77,12 @@ void Application::printReservations(){
         itr.second->printData();
     }
 }
+void Application::printEvaluations(){
+    for(auto itr:evaluations){
+        itr.second-> printData();
+    }
+}
+
 
 
 void Application::createHome(Home *newHome){
@@ -186,7 +192,60 @@ void Application::deleteReservation(){
     }
 }
 
-void Application::addEvaluation;
+void Application::addEvaluation(){
+        double idOwnerIndex;
+        double idGuestIndex;
+
+        string date;
+        string comment;
+        double score;
+
+        bool isValid = true;
+
+        cout << "Introduzca el ID de el que esta haciendo la reseña: ";
+        cin >> idGuestIndex;
+
+        cout << "Introduzca el ID del Dueño de la propiedad: ";
+        cin >> idOwnerIndex;
+
+        if(owners.find(idOwnerIndex) == owners.end()){
+            cout << "Ese propietario no se encuentra en la lista de propietarios, Porfavor revise que sus datos esten correctos antes de ingresarlos al sistema porfavor\n";
+            isValid=false;
+        }
+
+        if(guests.find(idGuestIndex) == guests.end()){
+            cout << "Ese huesped no se encuentra en la lista de huespedes, Porfavor revise que sus datos esten correctos antes de ingresarlos al sistema porfavor\n";
+            isValid=false;
+        }
+
+        if (isValid){
+            auto *evaluation = new Evaluation();
+
+            cout << "Introduzca fecha: \n";
+            cin.ignore();
+            getline(cin, date);
+
+            cout << "Introduzca Puntaje: \n";
+            cin >> score;
+
+            cout << "Introduzca comentario: \n";
+            cin.ignore();
+            getline(cin, comment);
+
+            owners[idOwnerIndex] -> setPoints((owners[idOwnerIndex] -> getPoints() + score)/2);
+
+            evaluation -> setDate(date);
+            evaluation -> setScore(score);
+            evaluation -> setGuest(guests[idGuestIndex]);
+            evaluation -> setOwner(owners[idOwnerIndex]);
+            evaluation -> setComment(comment);
+            evaluation -> setId(idEvaluation);
+
+            evaluations[idEvaluation] = evaluation;
+
+            idEvaluation++;
+        }
+}
 
 
 Application :: ~Application() {

@@ -9,6 +9,16 @@ Evaluation::Evaluation(){
     owner = nullptr;
 }
 
+void Evaluation::printData() {
+    cout << "Autor: " << guest -> getName() << "\n";
+    cout << "Evaluado: " << owner -> getName() << "\n";
+
+    cout << "Puntaje: " << score << "\n";
+    cout << "Fecha: " << date << "\n";
+    cout << "Comentario: \n   " << comment << "\n";
+
+}
+
 void Evaluation::setDate(string date){
     Evaluation::date = date;
 }
@@ -43,4 +53,11 @@ void Evaluation::setOwner(Owner* owner){
 }
 Owner* Evaluation::getOwner(){
     return owner;
+}
+
+void  Evaluation ::setId(double id){
+    Evaluation::id = id;
+}
+double Evaluation::getId(){
+    return id;
 }

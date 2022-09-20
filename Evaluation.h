@@ -12,6 +12,8 @@ using std::string;
 class Evaluation{
 
 private:
+
+    double id;
     string date;
     double score;
     string comment;
@@ -20,6 +22,8 @@ private:
 
 public:
     Evaluation();
+
+    void printData();
 
     void setDate(string date);
     string getDate();
@@ -35,6 +39,9 @@ public:
 
     void setOwner(Owner* owner);
     Owner* getOwner();
+
+    void setId(double id);
+    double getId();
 
 };
 
