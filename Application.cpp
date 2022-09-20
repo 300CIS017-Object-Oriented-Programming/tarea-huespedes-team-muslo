@@ -186,6 +186,8 @@ void Application::deleteReservation(){
     }
 }
 
+void Application::addEvaluation;
+
 
 Application :: ~Application() {
 
