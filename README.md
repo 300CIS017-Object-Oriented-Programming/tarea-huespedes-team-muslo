@@ -42,3 +42,7 @@ Se esperan las siguientes funcionalidades para el prototipo
   * *NEW*: cuando se agregan nuevas funcionaliades. 
   * *MOD*: cuando se modifican funcionalidades existentes. 
   * *FIX*: cuando se arreglan errores ya existentes. 
+
+### UML
+
+![URL-1.jpg](URL-1.jpg)
