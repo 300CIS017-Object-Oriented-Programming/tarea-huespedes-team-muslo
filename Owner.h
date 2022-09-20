@@ -9,7 +9,7 @@ using std::cout;
 using std::cin;
 using std::string;
 
-class Owner: private Person{
+class Owner: public Person{
 private:
     bool isFree;
     double points;
@@ -20,10 +20,10 @@ public:
     bool getIsFree();
     void setIsFree(bool isFree);
 
-    bool getPoints();
+    double getPoints();
     void setPoints(double points);
 
-    bool getHome();
+    Home* getHome();
     void setHome(Home* home);
 
 };

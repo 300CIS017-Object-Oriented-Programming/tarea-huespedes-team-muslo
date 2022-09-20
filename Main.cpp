@@ -9,7 +9,7 @@ void menu(Application & application) {
     int opc = 0;
     do {
         cout << "\n" << "BIENVENIDOS Al proyecto que hicimos\n";
-        cout << "1. Agregar propietario \n";
+        cout << "1. Agregar Casa a propietario \n";
         cout << "2. Imprimir propietarios \n";
         cout << "3. Agregar mascota \n";
         cout << "4. Imprimir mascotas libres \n";
@@ -25,6 +25,7 @@ void menu(Application & application) {
         cout << "\n";
         switch (opc) {
             case 1:
+                application.addHome();
                 break;
 
             default:

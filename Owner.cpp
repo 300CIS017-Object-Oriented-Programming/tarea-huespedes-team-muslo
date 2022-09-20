@@ -8,14 +8,14 @@ void Owner::setIsFree(bool isFree){
     Owner::isFree = isFree;
 }
 
-bool Owner::getPoints(){
+double Owner::getPoints(){
     return points;
 }
 void Owner::setPoints(double points){
     Owner::points = points;
 }
 
-bool Owner::getHome(){
+Home* Owner::getHome(){
     return home;
 }
 void Owner::setHome(Home* home){

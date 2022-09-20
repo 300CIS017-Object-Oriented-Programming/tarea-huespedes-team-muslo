@@ -36,6 +36,7 @@ public:
     void addEvaluation();
     void addReservation();
     void addHome();
+    void createHome(Home *newHome);
 
     void printOwners();
     void printReservations();
